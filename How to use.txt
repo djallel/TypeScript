@@ -1,0 +1,9 @@
+How to use
+
+Run "npm install" to install the required dependencies
+
+Run "tsc" to compile the TypeScript code
+
+ajouter "start": "lite-server" dans le fichier package.json, dans la partie "scripts".
+
+Run "npm start" to run the development server (lite-server)
