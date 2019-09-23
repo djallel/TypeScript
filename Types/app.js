@@ -43,12 +43,19 @@ function sayHello() {
 }
 // argument types
 function multiply(value1, value2) {
+    // et donc, si on on appelle la fonction avec string au lieu de number, on aura une erreur
     return value1 * value2;
 }
 // console.log(multiply(2, 'Max'));
 console.log(multiply(10, 2));
 // function types
-var myMultiply;
+var myMultiply1;
+myMultiply1 = sayHello;
+myMultiply1();
+myMultiply1 = multiply;
+console.log("myMultiply1 " + myMultiply1(5, 2));
+// function types
+var myMultiply; // toujours faire àa dans ma tête         multiply: () =>
 // myMultiply = sayHello;
 // myMultiply();
 myMultiply = multiply;
@@ -58,7 +65,8 @@ var userData = {
     name: "Max",
     age: 27
 };
-// userData = {
+// userData = { // l'ordre des parametre n'est pas important, on doit initialiser en fonction des nom de parametre,
+// c'est à dire à la aplce de a , on met name et à la place de b on doit mettre age
 //     a: "Hello",
 //     b: 22
 // };

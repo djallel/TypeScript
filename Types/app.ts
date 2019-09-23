@@ -39,25 +39,33 @@ car = { brand: "BMW", series: 3};
 console.log(car);
 
 // functions
-function returnMyName(): string {
+function returnMyName(): string { // la fonction retourne un string , et c'est le type de return myName;
     return myName;
 }
 console.log(returnMyName());
 
 // void
-function sayHello(): void {
+function sayHello(): void { // la fonction ne retourne rien dutout,
     console.log("Hello!");
 }
 
 // argument types
-function multiply(value1: number, value2: number): number {
+function multiply(value1: number, value2: number): number { // ici value1 et value2 sont typer,
+    // et donc, si on on appelle la fonction avec string au lieu de number, on aura une erreur
     return value1 * value2;
 }
 // console.log(multiply(2, 'Max'));
 console.log(multiply(10, 2));
 
 // function types
-let myMultiply: (a: number, b: number) => number;
+let myMultiply1;
+myMultiply1= sayHello;
+myMultiply1();
+myMultiply1= multiply;
+console.log("myMultiply1 "+myMultiply1(5,2));
+
+// function types
+let myMultiply: (a: number, b: number) => number; // toujours faire àa dans ma tête         multiply: () =>
 // myMultiply = sayHello;
 // myMultiply();
 myMultiply = multiply;
@@ -68,7 +76,8 @@ let userData: { name: string, age: number } = {
     name: "Max",
     age: 27
 };
-// userData = {
+// userData = { // l'ordre des parametre n'est pas important, on doit initialiser en fonction des nom de parametre,
+// c'est à dire à la aplce de a , on met name et à la place de b on doit mettre age
 //     a: "Hello",
 //     b: 22
 // };
