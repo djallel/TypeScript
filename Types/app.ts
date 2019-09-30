@@ -116,3 +116,18 @@ let finalValue = 30;
 if (typeof finalValue == "number") { // ici on parle de typeOF
     console.log("Final value is a number");
 }
+
+// never
+function neverReturns():never { // never = void, veut dire la fonction ne retourne JAMAIS rien,
+                                         // void veut dire la fonction ne retourne Rien
+    throw new Error('An error!');
+}
+
+//Nullable Types
+let canBuNull: number |null = 12; // ici canBeNull peut être null comme il peut être un nombre
+canBuNull= null;
+let canAlsoBeNull; //on va sur le fichier tsconfig.json et on ajoute "strictNullChecks": true ( voir la ligne 7),
+// cette ligne veut dire que canAlsoNull, peut être null
+canAlsoBeNull = null;
+let canThisBeAny : number | null = null;
+canAlsoBeNull = 12;

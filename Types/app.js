@@ -77,6 +77,8 @@ var complex = {
         return this.data;
     }
 };
+// type Complex, on pourrai l'utiliser par la suite directement, Compplex c'est comme
+// si on disait Boolean, ce sont des types
 var complex2 = {
     data: [100, 3.99, 10],
     output: function (all) {
@@ -84,11 +86,24 @@ var complex2 = {
     }
 };
 // union types
-var myRealRealAge = 27;
+var myRealRealAge = 27; // ici l'age peut être 27 en nmbre ou "27" en string
 myRealRealAge = "27";
 // myRealRealAge = true;
 // check types
 var finalValue = 30;
-if (typeof finalValue == "number") {
+if (typeof finalValue == "number") { // ici on parle de typeOF
     console.log("Final value is a number");
 }
+// never
+function neverReturns() {
+    // void veut dire la fonction ne retourne Rien
+    throw new Error('An error!');
+}
+//Nullable Types
+var canBuNull = 12; // ici canBeNull peut être null comme il peut être un nombre
+canBuNull = null;
+var canAlsoBeNull; //on va sur le fichier tsconfig.json et on ajoute "strictNullChecks": true ( voir la ligne 7),
+// cette ligne veut dire que canAlsoNull, peut être null
+canAlsoBeNull = null;
+var canThisBeAny = null;
+canAlsoBeNull = 12;
