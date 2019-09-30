@@ -94,7 +94,9 @@ let complex: {data: number[], output: (all: boolean) => number[]} = {
 
 // type alias
 
-type Complex = {data: number[], output: (all: boolean) => number[]};
+type Complex = {data: number[], output: (all: boolean) => number[]}; // on crée un alias, cette alias est un alias de
+// type Complex, on pourrai l'utiliser par la suite directement, Compplex c'est comme
+// si on disait Boolean, ce sont des types
 
 let complex2: Complex = {
     data: [100, 3.99, 10],
@@ -105,12 +107,12 @@ let complex2: Complex = {
 };
 
 // union types
-let myRealRealAge: number | string = 27;
+let myRealRealAge: number | string = 27; // ici l'age peut être 27 en nmbre ou "27" en string
 myRealRealAge = "27";
 // myRealRealAge = true;
 
 // check types
 let finalValue = 30;
-if (typeof finalValue == "number") {
+if (typeof finalValue == "number") { // ici on parle de typeOF
     console.log("Final value is a number");
 }
