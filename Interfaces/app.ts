@@ -1,8 +1,9 @@
 interface NamedPerson {
     firstName: string;
-    age?: number;
-    [propName: string]: any;
-    greet(lastName: string): void;
+    age?: number; //le point d'interrogation c'est pour dire que c'est optionnelle
+    [propName: string]: any; //  ce n'est pas un tableau c'est une notation pour dire que propName est une clé de
+    // type string exemple hobbies est de type string en bas dans ligne 17 const person: NamedPerson = {
+    greet(lastName: string): void; // on peut aussi mettre une methode
 }
 
 function greet(person: NamedPerson) {
