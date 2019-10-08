@@ -6,3 +6,5 @@ node_modules/blob/.idea/
 node_modules/extglob/lib/
 
 node_modules/micromatch/lib/
+
+.idea/
