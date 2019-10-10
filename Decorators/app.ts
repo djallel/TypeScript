@@ -1,8 +1,9 @@
 function logged(constructorFn: Function) {
     console.log(constructorFn);
 }
-
-@logged
+/*un décorateur n'est qu'une fonction, rien de plus dans typescript.( et plus précisement une fonction
+qui n'accepte qu'un seul argument*/
+@logged // ici,on dit qu'on a attaché  un décorateur,
 class Person {
     constructor() {
         console.log("Hi!");
@@ -10,11 +11,12 @@ class Person {
 }
 
 // Factory
+/*fACTORY SIGNIFIE USINE EN ANGLAIS*/
 function logging(value: boolean) {
-    return value ? logged : null;
+    return value ? logged : null; //logged c la fonction qui est en haut, si true, on appelle logged,sinon null
 }
 
-@logging(true)
+@logging(true) //Dans @logging(true) le true veut dire qu'on veut print dans la console, le false veut dire qu'on ne veut pas l'imprimer dans la console
 class Car {
 
 }

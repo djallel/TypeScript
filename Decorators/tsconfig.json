@@ -4,7 +4,8 @@
     "target": "es5",
     "noImplicitAny": false,
     "sourceMap": false,
-    "experimentalDecorators": true
+    "experimentalDecorators": true // je suis conscient que les décorateur sont une fonctionnalité qui pourrait changer
+    //à l'avenir,mais je souhaite quand même l'utiliser,donc ne me prévenez pas.
   },
   "exclude": [
     "node_modules"
