@@ -2,8 +2,10 @@ How to use
 
 Run "npm install" to install the required dependencies
 
+il faut aussi runner la commande suivante pour installer Jquery npm install --save-dev @types/jquery
 Run "typings" to install the required typings (needs the "typings" package to be installed on your machine => "npm install typings -g")
 
 Run "tsc" to compile the TypeScript code
 
 Run "npm start" to run the development server (lite-server)
+
